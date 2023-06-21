@@ -70,6 +70,9 @@ function moveCharacter(){
     character.style.bottom = y + 'px'
 }
 
+document.addEventListener('keyup', function(e){
+    direction = null
+})
 
 move(character).to(0, 150)
 
