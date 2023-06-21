@@ -1,11 +1,6 @@
 const inventory = newInventory()
 move(inventory).to(0, 0)
 
-const character = newImage('assets/green-character/static.gif')
-let direction = null;
-let x = 100;
-let y = 250;
-
 function move(element) {
     element.style.position = 'fixed'
 
@@ -18,6 +13,13 @@ function move(element) {
         to: moveToCoordinates
     }
 }
+
+const character = newImage('assets/green-character/static.gif')
+let direction = null;
+let x = 100;
+let y = 250;
+
+
 document.addEventListener('keydown', function(e){
     if(e.repeat) return;
 
@@ -51,12 +53,8 @@ function moveCharacter(){
     character.style.bottom = y + 'px'
 }
 
-document.addEventListener('keyup', function(e){
-    direction = null
-})
 
-
-move(character).to(100, 250)
+move(character).to(0, 150)
 
 
 move(newImage('assets/tree.png')).to(200, 450)
